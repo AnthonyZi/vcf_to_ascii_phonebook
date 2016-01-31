@@ -10,7 +10,7 @@ int main(int argc, char* argv[])
         system("./combine.sh");
         VCFIO *io = new VCFIO();
 
-        io->readvcf(argv[1]);
+        io->readvcf("combine.vcf");
         friends = io->getfriends();
         io->setfriends(friends);
         io->writephonebook("myphonebook");
